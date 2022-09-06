@@ -11,6 +11,14 @@ window.addEventListener('DOMContentLoaded', async(event) => {
     if (setting?.github?.email) { document.getElementById('github-email').value =  setting?.github?.email }
     if (setting?.github?.token) { document.getElementById('github-token').value = setting?.github?.token }
     if (setting?.github?.repo?.name) { document.getElementById('github-repo-name').value = setting?.github?.repo?.name }
+
+    // https://www.electronjs.org/ja/docs/latest/api/window-open
+    document.querySelector('#open-repo').addEventListener('click', async()=>{
+        window.open(`https://github.com/${document.getElementById('github-username').value}/${document.getElementById('github-repo-name').value}`, `_blank`)
+    })
+    document.querySelector('#open-site').addEventListener('click', async()=>{
+        window.open(setting.github.repo.homepage, `_blank`)
+    })
     //const git = new Git(setting?.github)
     //const hub = new GitHub(setting?.github)
     const git = new Git(setting)

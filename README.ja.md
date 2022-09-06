@@ -118,7 +118,7 @@ npm start
 ## つぶやく
 
 1. テキストエリアに任意のテキストを入力する
-1. <kdb>つぶやく</kbd>ボタンを押す
+1. <kbd>つぶやく</kbd>ボタンを押す
 1. GitHubに`push`される
 
 ### 制限
@@ -134,9 +134,9 @@ npm start
 ----|----|----|--------
 URL(https)|`<a href="${text}">${text}</a>`|以下以外のURLらしき文字列すべて|`/((h?)(ttps?:\/\/[a-zA-Z0-9.\-_@:/~?%&;=+#',()*!]+))/g; // ']))/`
 URL(ipfs)|`<a href="${text}">${text}</a>`|以下以外のURLらしき文字列すべて|`/((ipfs?:\/\/[a-zA-Z0-9.\-_@:/~?%&;=+#',()*!]+))/g; // ']))/`
-画像|`<img src="${text}">`|URL末尾の拡張子が画像らしきURL|`/((https?:\/\/[a-zA-Z0-9.\-_@:/~?%&;=+#',()*!]+\.(png|gif|jpg|jpeg|webp|avif)))/g; // ']))/`
-音声|`<audio controls width="320" src="${text}"></audio>`|URL末尾の拡張子が音声らしきURL|`/((https?:\/\/[a-zA-Z0-9.\-_@:/~?%&;=+#',()*!]+\.(wav|mp3|ogg|flac|wma|aiff|aac|m4a)))/g; // ']))/`
-動画|`<video controls width="320" src="${text}"></video>`|URL末尾の拡張子が動画らしきURL|`/((https?:\/\/[a-zA-Z0-9.\-_@:/~?%&;=+#',()*!]+\.(mp4|avi|wmv|mpg|flv|mov|webm|mkv|asf)))/g; // ']))/`
+画像|`<img src="${text}">`|URL末尾の拡張子が画像らしきURL|`/((https?:\/\/[a-zA-Z0-9.\-_@:/~?%&;=+#',()*!]+\.(png\|gif\|jpg\|jpeg\|webp\|avif)))/g; // ']))/`
+音声|`<audio controls width="320" src="${text}"></audio>`|URL末尾の拡張子が音声らしきURL|`/((https?:\/\/[a-zA-Z0-9.\-_@:/~?%&;=+#',()*!]+\.(wav\|mp3\|ogg\|flac\|wma\|aiff\|aac\|m4a)))/g; // ']))/`
+動画|`<video controls width="320" src="${text}"></video>`|URL末尾の拡張子が動画らしきURL|`/((https?:\/\/[a-zA-Z0-9.\-_@:/~?%&;=+#',()*!]+\.(mp4\|avi\|wmv\|mpg\|flv\|mov\|webm\|mkv\|asf)))/g; // ']))/`
 YouTube|`<iframe width="320" height="240" src="https://www.youtube.com/embed/${match[1]}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`|URLがYouTubeらしきURL|`/https:\/\/www.youtube.com\/watch\?v=([a-zA-Z0-9.\-_@:/~?%&;=+#',()*!]+)/`
 
 ### 投げモナボタン
@@ -150,8 +150,8 @@ YouTube|`<iframe width="320" height="240" src="https://www.youtube.com/embed/${m
 ## つぶやき削除
 
 1. 削除したいつぶやきの☒ボタンにチェックする
-1. <kdb>削除</kbd>ボタンを押す
-1. 確認ダイアログで<kdb>OK</kbd>ボタンを押す
+1. <kbd>削除</kbd>ボタンを押す
+1. 確認ダイアログで<kbd>OK</kbd>ボタンを押す
 
 　なお、ひとつもチェックしなければ***全件削除***になるので注意。
 

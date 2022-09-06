@@ -154,7 +154,7 @@ body {
 <!--<script src="src/js/main.js"></script>-->
 </head>
 <body>
-<h1>つぶやきをDB保存する</h1>
+<h1><a href="https://github.com/ytyaru/Electron.MyLog.20220906090127" target="_blank" rel="noopener noreferrer">つぶやきをDB保存する</a><a href="https://github.com/ytyaru/Electron.MyLog.20220906090127" target="_blank" rel="noopener noreferrer"><img src="src/asset/image/github.svg" width="32" height="32"></img></a></h1>
 <details><summary>使い方</summary>
 <h2>つぶやく</h2>
 <ol>
@@ -168,6 +168,14 @@ body {
 <li>つぶやき未選択なら全削除される</li>
 <li>つぶやきを1件以上未選択済みならそれらを削除する</li>
 </ol>
+<h2>設定</h2>
+<ol>
+<li>各テキストフィールドに任意の値を入力する</li>
+<li><kbd>保存</kbd>ボタンを押す</li>
+<li><code>db/setting.json</code>ファイルに保存される</li>
+</ol>
+<h3><code>db/setting.json</code>ファイル<h3>
+<table><thead><tr><th>プロパティ名</th><th>デフォルト値</th><th>概要</th></tr></thead><tbody><tr><td><code>mona.address</code></td><td>-</td><td>暗号通貨モナコインのアドレス</td></tr><tr><td><code>github.username</code></td><td><code>git config --global user.name</code></td><td>GitHubユーザ名</td></tr><tr><td><code>github.email</code></td><td><code>git config --global user.email</code></td><td>GitHubメールアドレス</td></tr><tr><td><code>github.token</code></td><td>-</td><td>アクセストークン（<code>repo</code>スコープ権限付）</td></tr><tr><td><code>github.repo.name</code></td><td><code>{ルートディレクトリ名}.Site</code></td><td>リポジトリ名</td></tr><tr><td><code>github.repo.description</code></td><td><code>著者のつぶやきサイトです。</code></td><td>リポジトリ説明文</td></tr><tr><td><code>github.repo.homepage</code></td><td><code>https://${username}.github.io/${repo.name}/</code>（初回push時に空なら自動付与）</td><td>リポジトリ関連URL</td></tr><tr><td><code>github.repo.topics</code></td><td><code>["website"]</code></td><td>任意トピックス</td></tr></tbody></table>
 </details>
 
 <div>
@@ -187,6 +195,8 @@ body {
 <input type="text" id="github-token" placeholder="GitHubアクセストークン"></input>
 <input type="text" id="github-repo-name" placeholder="GitHubリポジトリ名" minlength="1" maxlength="100" pattern="[A-Za-z0-9_.-]{1,100}"></input>
 <button id="save-setting" type="button">保存</button>
+<button id="open-repo" type="button">リポジトリを開く</button>
+<button id="open-site" type="button">サイトを開く</button>
 </fieldset>
 <!--
 <button id="push-test" type="button">pushテスト</button>

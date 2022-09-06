@@ -317,6 +317,8 @@ code = code.replace(/\'\.\/src\/asset\/image\/monacoin\/\'/g, `'./asset/image/mo
             - [ ] 動的HTML出力
             - [ ] 静的HTML出力
     - [ ] コメント受付・表示（Webmention）
+- [ ] 調査
+    - [ ] [Electronでブラウザ拡張機能が使えるか](https://www.electronjs.org/ja/docs/latest/api/extensions)
 
 # 前回やったこと
 
@@ -472,7 +474,11 @@ code = code.replace(/\'\.\/src\/asset\/image\/monacoin\/\'/g, `'./asset/image/mo
     * このアプリのソースコード
         * 作成元リポジトリURL
 * 作成後サイトリポジトリのREADME.md
+    * 作成後サイトURL
+    * 作成元リポジトリURL
 * 作成後サイト画面
+    * 作成後サイトリポジトリURL
+    * 作成元リポジトリURL
 
 ## ビルド
 
@@ -499,4 +505,20 @@ code = code.replace(/\'\.\/src\/asset\/image\/monacoin\/\'/g, `'./asset/image/mo
         - [ ] デモURL
     - [ ] 著者
     - [ ] ライセンス
+
+## Electronで指定URLを新しいウインドウで表示する
+
+* https://www.electronjs.org/ja/docs/latest/api/window-open
+
+```javascript
+window.open('https://github.com', '_blank', 'top=500,left=200,frame=false,nodeIntegration=no')
+```
+
+　Electronでも指定URLを表示できた。
+
+## index.html
+
+* リポジトリURLリンクを設置した
+* 自動作成リポジトリ・サイトのURL表示するボタンを設置した
+* 使い方に設定の項目を追加した
 
